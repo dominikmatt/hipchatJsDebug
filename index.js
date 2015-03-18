@@ -8,6 +8,7 @@ app.use(bodyParser());
 
 app.use(express.static(__dirname + '/views'));
 app.route('/message').post(frontendDebug);
+app.route('/script.js').post(express.static(__dirname + '/views/js/hipchatDebug.js'));
 
 
 app.listen(3000);
